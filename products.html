@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Products — Roshan, Packaging &amp; Label Designer</title>
+<meta name="description" content="Browse packaging and label projects by category: cosmetics, baby products, electronics, household and more.">
+<meta name="theme-color" content="#ebd80a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="products.css">
+</head>
+<body class="products-page">
+
+<header id="header">
+  <div class="wrap bar">
+    <a href="index.html#top" class="logo"><i>R</i>Roshan</a>
+    <nav id="nav">
+      <a href="index.html#industries">Industries</a><a href="index.html#process">Process</a><a href="index.html#why">Why me</a>
+      <a href="index.html#services">Services</a><a href="index.html#work">Work</a><a href="products.html" class="nav-page on" aria-current="page">Products<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a><a href="index.html#faq">FAQ</a>
+    </nav>
+    <button id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="p-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Products</span></nav>
+      <div class="p-hero-grid">
+        <div class="section-head">
+          <p class="section-eyebrow">Product portfolio</p>
+          <h1>Every product, ready for the shelf.</h1>
+          <p class="section-subtitle">Browse packaging I've designed by category. Open any product to preview the draft, dieline, 3D mockup and brand details.</p>
+        </div>      </div>
+    </div>
+  </section>
+
+  <section class="p-list">
+    <div class="wrap">
+      <div class="toolbar">
+        <div class="chips" id="chips" role="tablist" aria-label="Filter by category"></div>
+        <div class="tools">
+          <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="q" type="search" placeholder="Search product or brand" aria-label="Search products by name or brand" autocomplete="off">
+          </label>
+          <label class="sort">
+            <span class="sr">Sort products</span>
+            <select id="sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="az">Name A–Z</option>
+              <option value="za">Name Z–A</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+
+      <div class="p-grid" id="grid"></div>
+
+      <div class="p-empty" id="empty" hidden>
+        <span class="p-empty-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7M12 11v10"/></svg>
+        </span>
+        <h3>No products here yet.</h3>
+        <p>Projects for this category are coming soon.</p>
+        <div class="p-empty-cta"><button class="btn ghost small" id="reset" type="button">Show all products</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-includes">
+    <div class="wrap">
+      <div class="section-head"><p class="section-eyebrow">What every project includes</p><h2>From draft to print-ready.</h2></div>
+      <ul class="inc">
+        <li><b>Design draft</b><span>Line-art concepts to agree layout and hierarchy.</span></li>
+        <li><b>Print-ready dieline</b><span>Bleeds, CMYK colours and technical setup for your printer.</span></li>
+        <li><b>3D product mockup</b><span>Realistic renders for listings, pitches and social.</span></li>
+        <li><b>Brand system</b><span>Typography, colour codes and logo usage on pack.</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer><div class="wrap"><span>© 2026 Roshan — Packaging &amp; Label Designer</span></div></footer>
+<a href="#" id="totop" aria-label="Back to top">↑</a>
+
+<div class="pv" id="pv" aria-hidden="true">
+  <div class="pv-back" data-close></div>
+  <div class="pv-box" role="dialog" aria-modal="true" aria-labelledby="pvTitle">
+    <button class="x" data-close aria-label="Close preview">×</button>
+    <div class="pv-media">
+      <div class="pv-stage">
+        <img id="pvImg" alt="">
+        <span class="pv-label" id="pvLabel"></span>
+        <button class="pv-arrow prev" id="pvPrevImg" aria-label="Previous image">‹</button>
+        <button class="pv-arrow next" id="pvNextImg" aria-label="Next image">›</button>
+      </div>
+      <div class="pv-thumbs" id="pvThumbs"></div>
+    </div>
+    <div class="pv-info">
+      <p class="pv-cat" id="pvCat"></p>
+      <h2 id="pvTitle"></h2>
+      <p class="pv-brand" id="pvBrand"></p>
+      <p class="pv-desc" id="pvDesc"></p>
+      <dl class="pv-meta">
+        <div><dt>Packaging</dt><dd id="pvType"></dd></div>
+        <div><dt>Deliverables</dt><dd><ul class="tags" id="pvTags"></ul></dd></div>
+      </dl>
+      <div class="pv-nav">
+        <button id="pvPrev" type="button">← Previous product</button>
+        <button id="pvNext" type="button">Next product →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="products.js"></script>
+</body>
+</html>
