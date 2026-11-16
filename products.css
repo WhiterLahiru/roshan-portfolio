@@ -152,11 +152,11 @@
   .p-card,.p-media img,.pv-box{transition:none}
 }
 
-/* ===== Theme gradients (see style.css) ===== */
+/* ===== Theme (see style.css): wash/gradient for large areas, flat yellow for accents ===== */
 .p-hero,.p-includes{background:var(--wash)}
-.p-empty{background:var(--wash);border-color:#f2d58f}
-.chip.on i,.p-open,.p-empty-ic,.inc li::before{background:var(--grad)}
-.tags li{background:linear-gradient(135deg,#fffbe9,#fff1d6);border-color:#f4e2b5}
-.p-cat,.pv-cat{color:#b07612}
-.pv-arrow:hover,.pv-thumbs button.on{border-color:var(--amber)}
-.pv-arrow:hover{background:var(--grad)}
+.p-empty{background:var(--wash);border-color:#f3d995}
+.chip.on i,.p-open,.p-empty-ic,.inc li::before{background:var(--yellow)}
+.tags li{background:#fffbe3;border-color:#f3e6bd}
+.p-cat,.pv-cat{color:#b07a12}
+.pv-arrow:hover{background:var(--yellow)}
+.pv-arrow:hover,.pv-thumbs button.on{border-color:var(--ink)}
