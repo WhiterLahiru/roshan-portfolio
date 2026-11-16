@@ -1,5 +1,11 @@
 :root{
-  --paper:#fff;--ink:#1a1a17;--soft:#5f5a49;--yellow:#ebd80a;--pale:#fff8dc;--pale2:#fff1b8;--line:#f0e7c4;
+  --paper:#fff;--ink:#1a1a17;--soft:#5f5a49;--yellow:#fadf3a;--pale:#fff6da;--pale2:#ffefc2;--line:#f3e3bd;
+  /* theme gradients: lemon yellow into warm amber, taken from the packaging shot background */
+  --amber:#f6ab3b;
+  --grad:linear-gradient(135deg,#ffec4f 0%,#fad53a 52%,#f6ae3b 100%);
+  --grad-v:linear-gradient(180deg,#ffeb4d 0%,#f9d13a 58%,#f6ad3b 100%);
+  --grad-h:linear-gradient(90deg,#ffe94a 0%,#f9c63b 50%,#ffe94a 100%);
+  --wash:linear-gradient(165deg,#fffbe8 0%,#fff4d6 55%,#ffeccb 100%);
   --sans:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
   --ease:cubic-bezier(.22,.68,0,1);--out:cubic-bezier(.16,1,.3,1);
 }
@@ -413,3 +419,33 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
   html{scroll-behavior:auto}
 }
+
+/* ===== Theme: yellow-to-amber gradients (from the packaging shot) =====
+   Solid var(--yellow) stays underneath as a fallback; these layers add the gradient. */
+::selection{background:#ffe36b}
+.btn:not(.ghost){background:var(--grad);border-color:transparent;background-origin:border-box}
+.btn:not(.ghost):hover{box-shadow:0 14px 28px -12px rgba(246,171,59,.85)}
+.btn.ghost:hover{background:var(--ink)}
+.pane.b,.pre-logo i,.cmyk i,.logo i,#totop,.q button::after,.work figcaption{background:var(--grad)}
+#progress{background:var(--grad-h)}
+nav a:not(.btn)::after,.eyebrow span,.section-eyebrow::before{background:linear-gradient(90deg,#fbdc3a,var(--amber))}
+nav a.nav-page{background:var(--grad)}
+nav a.nav-page:hover,nav a.nav-page.on{background:var(--ink)}
+.hero h1 em::before{background:linear-gradient(90deg,#ffe94a,#fbcf3b 70%,#f8b83b)}
+.hero h1 b{color:var(--amber)}
+.hero-visual{background:linear-gradient(135deg,#fffaea,#fdefd0)}
+.slab,.hero-visual::after{background:var(--grad-v)}
+@media(min-width:1001px){.hero-visual::before{background:linear-gradient(#fef4dc,#fdefd0)}}
+.marquee{background:linear-gradient(90deg,#ffe94a 0%,#fad23a 35%,#f7b23b 65%,#ffe94a 100%)}
+.sec.tint,#process{background:var(--wash)}
+.sec.dark{background:var(--grad)}
+.card:hover{border-color:#f7c44a;box-shadow:0 22px 40px -20px rgba(246,171,59,.6)}
+#industries .ic,#why .benefit-icon{background:var(--grad)}
+#why .benefit-icon .icon-detail{stroke:#f9d23b}
+#why .benefit-icon .icon-cutout{fill:#f9d23b}
+.svc{border-top:0;box-shadow:inset 0 5px 0 0 #f8c33b}
+.svc:hover{box-shadow:inset 0 5px 0 0 #f8c33b,0 24px 44px -22px rgba(246,171,59,.6)}
+#process .steps li::before{background:var(--grad)}
+#process .steps li:not(:last-child)::after{background:linear-gradient(180deg,#fbd93a,var(--amber))}
+#process .steps li:last-child{background:linear-gradient(135deg,#fffcec,#fff1d4);border-color:#f2d58f}
+.x:hover{background:var(--grad)}
