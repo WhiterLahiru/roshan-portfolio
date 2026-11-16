@@ -435,7 +435,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .hero-visual{background:linear-gradient(160deg,#fffdeb,#fff1d3)}
 @media(min-width:1001px){.hero-visual::before{background:linear-gradient(#fff8e0,#fff1d3)}}
 .slab,.hero-visual::after{background:var(--grad-v)}
-.marquee{background:linear-gradient(90deg,#fbf049 0%,#fde148 30%,#f8ba46 60%,#fbf049 100%)}
+.marquee{background:var(--yellow)}
 .sec.tint,#process{background:var(--wash)}
 #process .steps li:not(:last-child)::after{background:linear-gradient(180deg,var(--yellow),var(--amber))}
 #process .steps li:last-child{background:linear-gradient(160deg,#fffdeb,#fff2d6);border-color:#f3d995}
